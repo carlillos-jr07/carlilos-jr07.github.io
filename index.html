@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introducción a los Anillos (Estructuras Algebraicas)</title>
+    <link rel="stylesheet" href="style.css">
+    <script type="text/javascript" id="MathJax-script" async
+        src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+    </script>
+</head>
+<body>
+    <header>
+        <h1> Teoría de Anillos: Una Introducción</h1>
+    </header>
+    
+    <main>
+        
+        <section id="introduccion">
+            <h2>¿Qué es un Anillo?</h2>
+            <p>En el álgebra abstracta, un <strong>anillo</strong> es una estructura algebraica equipada con dos operaciones binarias que cumplen ciertas propiedades que generalizan las de la suma y la multiplicación de números enteros. La notación estándar para un anillo es $(R, +, \cdot)$, donde $R$ es un conjunto y '$+$' y '$\cdot$' son las operaciones de suma y multiplicación.</p>
+            <p>El estudio de los anillos es fundamental, pues muchos conjuntos importantes en matemáticas (como los números enteros, los polinomios o las matrices) tienen esta estructura.</p>
+        </section>
+
+        <hr>
+
+        <section id="caracteristicas">
+            <h2>Características y Axiomas Fundamentales</h2>
+            <p>Para que un conjunto $R$ junto con dos operaciones $(R, +, \cdot)$ sea un anillo, debe satisfacer los siguientes axiomas:</p>
+            
+            <table>
+                <thead>
+                    <tr>
+                        <th>Operación</th>
+                        <th>Axioma</th>
+                        <th>Descripción</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Suma ($+$)</td>
+                        <td>1. Clausura</td>
+                        <td>Para todo $a, b \in R$, $a + b \in R$.</td>
+                    </tr>
+                    <tr>
+                        <td>Suma ($+$)</td>
+                        <td>2. Asociatividad</td>
+                        <td>Para todo $a, b, c \in R$, $(a + b) + c = a + (b + c)$.</td>
+                    </tr>
+                    <tr>
+                        <td>Suma ($+$)</td>
+                        <td>3. Elemento Neutro</td>
+                        <td>Existe un $0 \in R$ tal que para todo $a \in R$, $a + 0 = 0 + a = a$.</td>
+                    </tr>
+                    <tr>
+                        <td>Suma ($+$)</td>
+                        <td>4. Elemento Inverso</td>
+                        <td>Para cada $a \in R$, existe un $-a \in R$ tal que $a + (-a) = (-a) + a = 0$. (Esto convierte a $(R, +)$ en un grupo abeliano).</td>
+                    </tr>
+                    <tr>
+                        <td>Suma ($+$)</td>
+                        <td>5. Conmutatividad</td>
+                        <td>Para todo $a, b \in R$, $a + b = b + a$.</td>
+                    </tr>
+                    <tr>
+                        <td>Multiplicación ($\cdot$)</td>
+                        <td>6. Clausura</td>
+                        <td>Para todo $a, b \in R$, $a \cdot b \in R$.</td>
+                    </tr>
+                    <tr>
+                        <td>Multiplicación ($\cdot$)</td>
+                        <td>7. Asociatividad</td>
+                        <td>Para todo $a, b, c \in R$, $(a \cdot b) \cdot c = a \cdot (b \cdot c)$.</td>
+                    </tr>
+                    <tr>
+                        <td>Distribución</td>
+                        <td>8. Distributiva por la Izquierda</td>
+                        <td>Para todo $a, b, c \in R$, $a \cdot (b + c) = (a \cdot b) + (a \cdot c)$.</td>
+                    </tr>
+                    <tr>
+                        <td>Distribución</td>
+                        <td>9. Distributiva por la Derecha</td>
+                        <td>Para todo $a, b, c \in R$, $(a + b) \cdot c = (a \cdot c) + (b \cdot c)$.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+        
+        <hr>
+
+        <section id="propiedades">
+            <h2>Demostración de Propiedades Básicas</h2>
+            <p>Una vez que se establecen los axiomas, podemos deducir propiedades importantes de los anillos. Haz clic para ver la demostración.</p>
+
+            <div class="propiedad-card">
+                <button class="toggle-btn" data-target="prop1">Propiedad 1: El producto por cero es cero.</button>
+                <div class="demostracion" id="prop1">
+                    <h3>Teorema: Para todo $a \in R$, $a \cdot 0 = 0 \cdot a = 0$.</h3>
+                    <p><strong>Demostración:</strong></p>
+                    <ol>
+                        <li>Partimos de la propiedad del elemento neutro aditivo: $0 + 0 = 0$.</li>
+                        <li>Multiplicamos por $a$ por la izquierda: $a \cdot (0 + 0) = a \cdot 0$.</li>
+                        <li>Aplicamos la propiedad distributiva: $(a \cdot 0) + (a \cdot 0) = a \cdot 0$.</li>
+                        <li>Sabemos que $a \cdot 0$ es un elemento de $R$, y todo elemento tiene un inverso aditivo, $-(a \cdot 0)$. Sumamos este inverso a ambos lados: $[(a \cdot 0) + (a \cdot 0)] + [-(a \cdot 0)] = [a \cdot 0] + [-(a \cdot 0)]$.</li>
+                        <li>Usando la asociatividad a la izquierda y la definición del inverso a la derecha: $(a \cdot 0) + [(a \cdot 0) + (-(a \cdot 0))] = 0$.</li>
+                        <li>Por la definición del inverso: $(a \cdot 0) + 0 = 0$.</li>
+                        <li>Por la definición del neutro aditivo: $a \cdot 0 = 0$.</li>
+                        <li>La demostración para $0 \cdot a = 0$ es simétrica usando la distributiva por la derecha.</li>
+                    </ol>
+                    <p>Q.E.D.</p>
+                </div>
+            </div>
+
+            <div class="propiedad-card">
+                <button class="toggle-btn" data-target="prop2">Propiedad 2: Producto de negativos.</button>
+                <div class="demostracion" id="prop2">
+                    <h3>Teorema: Para todo $a, b \in R$, $(-a) \cdot (-b) = a \cdot b$.</h3>
+                    <p><strong>Demostración:</strong></p>
+                    <ol>
+                        <li>Demostraremos primero que $(-a) \cdot b = -(a \cdot b)$. Partimos de $a + (-a) = 0$.</li>
+                        <li>Multiplicamos por $b$ por la derecha: $[a + (-a)] \cdot b = 0 \cdot b$.</li>
+                        <li>Por la distributiva por la derecha y la Propiedad 1: $(a \cdot b) + ((-a) \cdot b) = 0$.</li>
+                        <li>Como $(a \cdot b) + ((-a) \cdot b) = 0$, se deduce por unicidad del inverso que $(-a) \cdot b$ es el inverso de $a \cdot b$, es decir, $(-a) \cdot b = -(a \cdot b)$.</li>
+                        <li>Ahora, usando esto y que $-(-x) = x$: $(-a) \cdot (-b) = - [a \cdot (-b)] = - [- (a \cdot b)] = a \cdot b$.</li>
+                    </ol>
+                    <p>Q.E.D.</p>
+                </div>
+            </div>
+            
+        </section>
+
+    </main>
+
+    <footer>
+        <p>Estructuras Algebraicas &copy; 2025 | Creado con GitHub Pages y MathJax</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
