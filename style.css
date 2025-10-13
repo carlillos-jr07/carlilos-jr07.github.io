@@ -1,0 +1,100 @@
+/* Contenido COMPLETO de style.css */
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9;
+    color: #333;
+}
+
+header {
+    background: #4A148C;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+    border-bottom: 5px solid #8E24AA;
+}
+
+main {
+    padding: 20px;
+    max-width: 900px;
+    margin: auto;
+    background: #fff;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+h1, h2 {
+    color: #6A1B9A;
+}
+
+hr {
+    border: 0;
+    height: 1px;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), #ccc, rgba(0, 0, 0, 0));
+    margin: 30px 0;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: left;
+}
+
+th {
+    background-color: #F3E5F5;
+    color: #6A1B9A;
+}
+
+.propiedad-card {
+    margin-bottom: 15px;
+    border: 1px solid #E0E0E0;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.toggle-btn {
+    width: 100%;
+    background-color: #9C27B0;
+    color: white;
+    padding: 15px;
+    border: none;
+    text-align: left;
+    font-size: 1.1em;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.toggle-btn:hover {
+    background-color: #7B1FA2;
+}
+
+.demostracion {
+    padding: 15px;
+    background-color: #FAF3FB;
+    display: none; /* ESTA ES LA CLAVE: OCULTA EL CONTENIDO INICIALMENTE */
+}
+
+.demostracion h3 {
+    color: #4A148C;
+    border-bottom: 1px dashed #6A1B9A;
+    padding-bottom: 5px;
+}
+
+.demostracion ol {
+    padding-left: 20px;
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    margin-top: 20px;
+    background-color: #4A148C;
+    color: white;
+}
