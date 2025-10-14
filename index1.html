@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introducción a los Cuerpos (Estructuras Algebraicas)</title>
+    <link rel="stylesheet" href="style.css">
+    <script type="text/javascript" id="MathJax-script" async
+        src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+    </script>
+</head>
+<body>
+    <header>
+        <h1>Teoría de Cuerpos: Una Estructura Fundamental</h1>
+    </header>
+    
+    <main>
+        
+        <section id="introduccion">
+            <h2>¿Qué es un Cuerpo?</h2>
+            <p>En álgebra abstracta, un <strong>cuerpo</strong> (o campo) es una estructura algebraica $(K, +, \cdot)$ que extiende la estructura de anillo al exigir propiedades adicionales que permiten las operaciones de **división** (excepto por cero). Formalmente, un cuerpo es un anillo conmutativo con unidad donde todo elemento no nulo posee un inverso multiplicativo. Es la estructura que mejor modela el comportamiento de los números racionales, reales y complejos.</p>
+        </section>
+
+        <hr>
+
+        <section id="axiomas">
+            <h2>Propiedades y Axiomas Fundamentales</h2>
+            <p>Para que un conjunto $K$ junto con dos operaciones $(K, +, \cdot)$ sea un cuerpo, debe cumplir los nueve axiomas de un anillo conmutativo con unidad, más un axioma adicional (el Inverso Multiplicativo):</p>
+            
+            <table>
+                <thead>
+                    <tr>
+                        <th>Operación</th>
+                        <th>Axioma</th>
+                        <th>Descripción</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Suma ($+$)</td>
+                        <td colspan="2">El conjunto $(K, +)$ es un **Grupo Abeliano** (Cumple Clausura, Asociatividad, Neutro $0$, Inverso $-a$, Conmutatividad).</td>
+                    </tr>
+                    <tr>
+                        <td>Multiplicación ($\cdot$)</td>
+                        <td>1. Clausura</td>
+                        <td>Para todo $a, b \in K$, $a \cdot b \in K$.</td>
+                    </tr>
+                    <tr>
+                        <td>Multiplicación ($\cdot$)</td>
+                        <td>2. Asociatividad</td>
+                        <td>Para todo $a, b, c \in K$, $(a \cdot b) \cdot c = a \cdot (b \cdot c)$.</td>
+                    </tr>
+                    <tr>
+                        <td>Multiplicación ($\cdot$)</td>
+                        <td>3. Unidad</td>
+                        <td>Existe un $1 \in K$, $1 \neq 0$, tal que $a \cdot 1 = a$.</td>
+                    </tr>
+                    <tr>
+                        <td>Multiplicación ($\cdot$)</td>
+                        <td>4. Conmutatividad</td>
+                        <td>Para todo $a, b \in K$, $a \cdot b = b \cdot a$.</td>
+                    </tr>
+                    <tr>
+                        <td>Multiplicación ($\cdot$)</td>
+                        <td><span style="color: #9C27B0; font-weight: bold;">5. Inverso Multiplicativo</span></td>
+                        <td>Para cada $a \in K$ con $a \neq 0$, existe un $a^{-1} \in K$ tal que $a \cdot a^{-1} = 1$.</td>
+                    </tr>
+                    <tr>
+                        <td>Distribución</td>
+                        <td>6. Distributividad</td>
+                        <td>Para todo $a, b, c \in K$, $a \cdot (b + c) = (a \cdot b) + (a \cdot c)$.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <hr>
+        
+        <section id="tipos">
+            <h2>Tipos de Cuerpos y Ejemplos</h2>
+            <p>Los cuerpos se clasifican principalmente según la cardinalidad (el número de elementos) de su conjunto $K$:</p>
+
+            <div class="propiedad-card">
+                <button class="toggle-btn" data-target="tipo1">Cuerpos Infinitos</button>
+                <div class="demostracion" id="tipo1">
+                    <h3>Definición y Ejemplos</h3>
+                    <p>Un cuerpo $K$ es infinito si contiene un número infinito de elementos.</p>
+                    <ul>
+                        <li>Los **Números Racionales** ($\mathbb{Q}$): Fracciones $\frac{a}{b}$.</li>
+                        <li>Los **Números Reales** ($\mathbb{R}$): Utilizado en el análisis.</li>
+                        <li>Los **Números Complejos** ($\mathbb{C}$): El cuerpo algebraicamente cerrado.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="propiedad-card">
+                <button class="toggle-btn" data-target="tipo2">Cuerpos Finitos (Cuerpos de Galois)</button>
+                <div class="demostracion" id="tipo2">
+                    <h3>Definición y Propiedades</h3>
+                    <p>Un cuerpo $K$ es finito si contiene un número finito de elementos. La cardinalidad es siempre una potencia de un número primo, $p^n$.</p>
+                    <ul>
+                        <li>**Cardinalidad:** $|K| = p^n$, donde $p$ es primo.</li>
+                        <li>**Ejemplo:** El cuerpo $\mathbb{Z}_p$, los enteros módulo un número primo $p$. Por ejemplo, $\mathbb{Z}_5 = \{0, 1, 2, 3, 4\}$.</li>
+                    </ul>
+                </div>
+            </div>
+            
+        </section>
+
+    </main>
+
+    <footer>
+        <p>Estructuras Algebraicas | Ver página de <a href="anillos.html" style="color: #F3E5F5;">Anillos</a> | Creado con GitHub Pages y MathJax</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
